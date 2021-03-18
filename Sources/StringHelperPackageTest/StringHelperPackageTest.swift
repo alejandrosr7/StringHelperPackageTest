@@ -1,7 +1,7 @@
 import Foundation
 
 public struct StringHelperPackageTest {
-    public init() {}
+    public init() { }
     public func localizedString(_ string: String) -> String {
         string.localized()
     }
