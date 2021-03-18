@@ -3,10 +3,11 @@ import XCTest
 
 final class StringHelperPackageTestTests: XCTestCase {
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(StringHelperPackageTest().text, "Hello, World!")
+        XCTAssertEqual(StringHelperPackageTest().localizedString("Hello, World!"), "Hello, World!")
+        XCTAssertEqual(StringHelperPackageTest().joinAttributedStrings(
+                    NSAttributedString(string: "Hello, "),
+                    NSAttributedString(string: "World!"))
+                    .string, "Hello, World!")
     }
 
     static var allTests = [
